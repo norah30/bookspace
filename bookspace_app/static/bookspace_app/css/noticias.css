@@ -1,0 +1,73 @@
+.fondo-blur {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/biblioteca_General.jpg");
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px);
+    z-index: -1;
+}
+
+.noticias {
+    width: 80%;
+    margin: 30px auto;
+    border-radius: 8px;
+}
+
+.noticias__titulo{
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 2em;
+}
+
+.noticias__libros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+    margin: 30px 0;
+}
+
+.noticias__libro-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 260px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.noticias__libro-card:hover {
+    transform: scale(1.05); /* Aumenta el tamaño en un 5% */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
+    cursor: pointer;
+}
+
+
+.noticias__libro-imagen {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.actualizacion {
+    width: 80%;
+    background-color: rgb(255, 255, 255);
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.noticias__articulo li,
+.noticias__articulo p {
+    margin: 30px;
+}
+
+

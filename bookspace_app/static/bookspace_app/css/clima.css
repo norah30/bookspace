@@ -1,0 +1,125 @@
+.fondo-blur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/biblioteca_General.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: blur(5px);
+  z-index: -1;
+}
+
+:root {
+  font-size: 16px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  --c_negro: #000;
+  --c_blanco: #fff;
+  --c_fondo: #2c3e50;
+  --c_gris: #ecf0f1;
+  --c_naranja: #ffa026;
+}
+
+.contenedor__clima {
+  width: 100%;
+  padding: 30px;
+}
+
+.clima {
+  width: 800px;
+  background-color: #fef9f2;
+  margin: 0.3rem auto;
+  padding: 2rem;
+  border-radius: 6px;
+}
+
+.clima h1 {
+  margin-bottom: 20px;
+  color: #000;
+  font-size: 2rem;
+}
+
+.busqueda-ciudad {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.busqueda-ciudad input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.busqueda-ciudad button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.busqueda-ciudad button:hover {
+  background-color: var(--c_naranja);
+}
+
+.datos-clima {
+  text-align: center;
+}
+
+.temperatura {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.detalles-clima {
+  line-height: 1.6;
+}
+
+.detalles-clima p {
+  margin: 5px 0;
+}
+
+.mensaje-error {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 10px;
+  border: 1px solid #f5c6cb;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+.mensaje-error {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 15px;
+  border: 1px solid #f5c6cb;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  border-left: 4px solid #dc3545;
+}
+
+.busqueda-ciudad button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.datos-clima {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,30 @@
+{% load static %}
+<header>
+  <div class="contenedor_Encabezado">
+    <a class="logo" href="{% url 'home' %}">
+      <img
+        src="{% static 'bookspace_app/img/logo_BookSpace.png' %}"
+        alt="Logo de BookSpace"
+        id="logo"
+      />
+    </a>
+    <div class="contenedor_Encabezado--Titulo">
+      <h1>Bienvenidos a BookSpace</h1>
+      <p>"Tu espacio para descubrir nuevos mundos"</p>
+    </div>
+  </div>
+
+  <nav class="contenedor_Enlaces">
+    <ul>
+      <li><a href="{% url 'home' %}">HOME</a></li>
+      <li class="empresa"><a href="{% url 'empresa' %}">EMPRESA</a></li>
+      <li><a href="{% url 'productos' %}">PRODUCTOS</a></li>
+      <li><a href="{% url 'oferta_mes' %}">OFERTA DEL MES</a></li>
+      <li><a href="{% url 'localizacion' %}">LOCALIZACION</a></li>
+      <li><a href="{% url 'contacto' %}">CONTACTO</a></li>
+      <li><a href="{% url 'noticias' %}">NOTICIAS</a></li>
+      <li><a href="{% url 'clima' %}">CLIMA</a></li>
+      <li class="login"><a href="{% url 'login' %}">INICIAR SESIÓN</a></li>
+    </ul>
+  </nav>
+</header>

@@ -1,0 +1,152 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookSpace</title>
+    <link rel="icon" href="{% static 'bookspace_app/img/logo_BookSpace.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'bookspace_app/css/home.css' %}">
+    <link rel="stylesheet" href="{% static 'bookspace_app/css/empresa.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+    {% include 'bookspace_app/includes/header.html' %}
+    
+    <div class="fondo-blur"></div>
+
+    <div class="contenedor__empresa">
+
+        <section class="somos">
+            <div class="somos__contenido">
+                <h2 class="somos__titulo">¿Quiénes somos?</h2>
+                <p class="somos__descripcion">
+                    En <strong> BookSpace </strong> creemos firmemente que la lectura es una herramienta poderosa para transformar vidas. Somos una librería digital comprometida con el acceso libre, rápido y sostenible al conocimiento, la cultura y el entretenimiento. Nuestra misión es ofrecer una experiencia de lectura moderna, accesible y personalizada para personas de todas las edades y estilos de vida.
+
+                    BookSpace nació con la idea de crear un espacio donde los lectores pudieran encontrar no solo libros, sino también inspiración, comunidad y crecimiento personal. Nos apasiona la literatura en todas sus formas, y por eso hemos reunido un equipo de profesionales en tecnología, educación y letras que trabajan constantemente para mejorar nuestra plataforma y nuestro catálogo.
+
+                    Nuestro objetivo es facilitar el acceso a miles de títulos en formato digital, disponibles en cualquier momento y desde cualquier dispositivo. Contamos con una amplia selección de géneros, desde literatura clásica y contemporánea hasta libros técnicos, académicos, infantiles y de desarrollo personal. También promovemos autores independientes y contenido local para apoyar el talento emergente.
+
+                    Más que una tienda de libros digitales, somos una comunidad. En BookSpace podrás participar en clubes de lectura, dejar tus reseñas, recibir recomendaciones personalizadas y formar parte de eventos literarios virtuales. Creemos que cada lector tiene una historia, y queremos ayudarte a encontrar las palabras que te acompañen en tu camino.
+                </p>
+            </div>
+            <div class="somos__imagen">
+                <img src="{% static 'bookspace_app/img/libreria_1.jpg' %}" alt="Libreria">
+            </div>
+        </section>
+
+        <section class="somos mision">
+            <div class="somos__imagen">
+                <img src="{% static 'bookspace_app/img/libreria_3.jpg' %}" alt="Libreria">
+            </div>
+            <div class="somos__contenido">
+                <h2 class="somos__titulo">Misión</h2>
+                <p class="somos__descripcion">
+                    Nuestra misión es fomentar la lectura digital ofreciendo una amplia variedad de libros 
+                    accesibles y de calidad, que promuevan el aprendizaje, la cultura y el entretenimiento 
+                    en nuestra comunidad.
+                </p>
+            </div>
+        </section>
+
+        <section class="somos vision">
+            <div class="somos__contenido">
+                <h2 class="somos__titulo">Visión</h2>
+                <p class="somos__descripcion">
+                    Ser la plataforma digital líder en distribución de libros en Ecuador, reconocida por 
+                    su innovación, accesibilidad y aporte al desarrollo cultural y educativo.
+                </p>
+            </div>
+            <div class="somos__imagen">
+                <img src="{% static 'bookspace_app/img/vision.jpg' %}" alt="Visión">
+            </div>
+        </section>
+
+        <section class="valores">
+            <h2>Valores</h2>
+            <div class="contenido_valores">
+                <p>📖 Pasión por el conocimiento</p>
+                <p>🤝 Compromiso con la comunidad</p>
+                <p>💡 Innovación constante</p>
+                <p>🌱 Responsabilidad social</p>
+                <p>⭐ Calidad y excelencia</p>
+            </div>
+        </section>
+
+        
+        <div class="contenido_organigrama">
+            <img src="{% static 'bookspace_app/img/organigrama_1.png' %}" alt="Organigrama Empresa">
+        </div>
+
+        <section class="horarios">
+            <h2 class="horarios__titulo">Horarios de Atención</h2>
+            <table class="horarios__tabla">
+                <thead>
+                    <tr>
+                        <th>Día</th>
+                        <th>Mañana</th>
+                        <th>Tarde / Noche</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Lunes</td>
+                        <td>08:00 - 12:30</td>
+                        <td>14:00 - 18:00</td>
+                    </tr>
+                    <tr>
+                        <td>Martes</td>
+                        <td>08:00 - 12:30</td>
+                        <td>14:00 - 18:00</td>
+                    </tr>
+                    <tr>
+                        <td>Miércoles</td>
+                        <td>08:00 - 12:30</td>
+                        <td>14:00 - 18:00</td>
+                    </tr>
+                    <tr>
+                        <td>Jueves</td>
+                        <td>08:00 - 12:30</td>
+                        <td>14:00 - 18:00</td>
+                    </tr>
+                    <tr>
+                        <td>Viernes</td>
+                        <td>08:00 - 12:30</td>
+                        <td>14:00 - 18:00</td>
+                    </tr>
+                    <tr>
+                        <td>Sábado</td>
+                        <td>09:00 - 12:00</td>
+                        <td>Cerrado</td>
+                    </tr>
+                    <tr>
+                        <td>Domingo</td>
+                        <td colspan="2">Cerrado</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+
+        <section class="servicios">
+            <div class="servicios__contenido">
+                <h2 class="servicios__titulo">Servicios que ofrecemos</h2>
+                <img src="{% static 'bookspace_app/img/libreria_2.jpg' %}" alt="Servicios BookSpace">
+                <ul class="servicios__lista">
+                    <li class="servicios__item"><i class="fas fa-book"></i>Venta de libros digitales.</li>
+                    <li class="servicios__item"><i class="fas fa-list-alt"></i>Acceso a catálogos en línea.</li>
+                    <li class="servicios__item"><i class="fas fa-cloud"></i>Lectura en la nube desde cualquier dispositivo.</li>
+                    <li class="servicios__item"><i class="fas fa-sync-alt"></i>Suscripciones mensuales con acceso ilimitado.</li>
+                    <li class="servicios__item"><i class="fas fa-lightbulb"></i>Recomendaciones personalizadas mediante IA.</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    {% include 'bookspace_app/includes/footer.html' %}
+
+</body>
+
+</html>

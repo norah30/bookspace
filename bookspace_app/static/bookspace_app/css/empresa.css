@@ -1,0 +1,208 @@
+.fondo-blur {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/biblioteca_General.jpg");
+    background-size: cover;
+    background-position: center;
+    filter: blur(5px);
+    z-index: -1;
+}
+
+.contenedor__empresa {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.somos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    /* espacio entre columnas */
+}
+
+.somos,
+.horarios,
+.servicios,
+.valores,
+.organigrama {
+    margin: 2rem;
+    padding: 2rem;
+    width: 75%;
+    max-width: 1200px;
+    /* ancho máximo del contenedor */
+    background-color: #ffffff;
+    /* color de fondo */
+    border-radius: 8px;
+    /* bordes redondeados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    /* sombra sutil */
+}
+
+.somos__contenido {
+    flex: 1;
+    /* parte izquierda ocupa espacio proporcional */
+}
+
+.somos__titulo,
+.horarios__titulo,
+.servicios__titulo {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.somos__descripcion {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.somos__imagen {
+    flex: 1;
+    text-align: center;
+}
+
+.somos__imagen img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.valores h2{
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.contenido_valores{
+    display: flex;
+}
+
+.valores p{
+    margin: 2px;
+    width: 200px;
+    padding: 8px;
+    background-color: #ffa026;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.valores p:hover{
+    background-color: #ffd739;
+    cursor: pointer;
+}
+
+.contenido_organigrama {
+    text-align: center;
+}
+
+.contenido_organigrama img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+/* HORARIOS */
+
+.horarios__tabla {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+}
+
+.horarios__tabla thead {
+    background-color: #2C3E50;
+    /* tu color de fondo */
+    color: white;
+}
+
+.horarios__tabla th,
+.horarios__tabla td {
+    border: 1px solid #ddd;
+    padding: 12px 15px;
+    text-align: center;
+}
+
+.horarios__tabla tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.horarios__tabla tbody tr:hover {
+    background-color: #d6e0f0;
+    cursor: default;
+}
+
+
+/* SERVICIOS */
+
+/* Contenedor general de la sección */
+.servicios {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+/* Contenido interno con imagen e ítems en fila */
+.servicios__contenido {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* Para que se adapte en pantallas pequeñas */
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Título de la sección */
+.servicios__titulo {
+    width: 100%;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #000000;
+    text-align: center;
+}
+
+/* Imagen a la izquierda */
+.servicios__contenido img {
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+/* Lista sin puntos ni márgenes extra */
+.servicios__lista {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Cada ítem: icono + texto alineados */
+.servicios__item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* espacio entre ícono y texto */
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    color: #34495e;
+}
+
+/* Íconos */
+.servicios__item i {
+    color: #2C3E50;
+    font-size: 1.4rem;
+    width: 25px;
+    /* ancho fijo para alinear */
+    text-align: center;
+    /* centrado dentro del ancho */
+    flex-shrink: 0;
+    /* no se encoge */
+}

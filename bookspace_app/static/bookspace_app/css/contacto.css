@@ -1,0 +1,93 @@
+.fondo-blur {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/biblioteca_General.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: blur(5px);
+  z-index: -1;
+}
+
+:root {
+  font-size: 16px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  --c_negro: #000;
+  --c_blanco: #fff;
+  --c_fondo: #2c3e50;
+  --c_gris: #ecf0f1;
+  --c_naranja: #ffa026;
+}
+
+.contenedor__contacto {
+  width: 100%;
+  padding: 30px;
+}
+
+.contacto {
+  width: 800px;
+  background-color: #fef9f2;
+  margin: 0.3rem auto;
+  padding: 2rem;
+  border-radius: 6px;
+}
+
+.contacto h1 {
+  margin-bottom: 20px;
+  color: #000;
+  font-size: 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 10px;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--c_naranja);
+}
+
+.mensaje-exito {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 10px;
+  border: 1px solid #c3e6cb;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.mensaje-error {
+  background-color: #f8d7da;
+  color: #721c24;
+  padding: 10px;
+  border: 1px solid #f5c6cb;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}

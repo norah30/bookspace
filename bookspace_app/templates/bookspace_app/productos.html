@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookSpace</title>
+    <link rel="icon" href="{% static 'bookspace_app/img/logo_BookSpace.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'bookspace_app/css/home.css' %}">
+    <link rel="stylesheet" href="{% static 'bookspace_app/css/productos.css' %}">
+</head>
+<body>
+
+    {% include 'bookspace_app/includes/header.html' %}
+
+    <div class="fondo-blur"></div>
+
+    <div class="productos">
+        <section class="productos__contenido">
+            <h1 class="productos__titulo">Productos</h1>
+
+            <div class="productos__libros">
+
+                {% for libro in libros %}
+                    <div class="productos__libro-card">
+                        <img class="productos__libro-imagen {% if libro.extra_class %}{{ libro.extra_class }}{% endif %}" 
+                             src="{% static libro.imagen %}" 
+                             alt="Libro {{ libro.titulo }}">
+                        <h2 class="productos__libro-titulo">{{ libro.titulo }}</h2>
+                        <p class="productos__libro-detalle"><strong>Autor:</strong> {{ libro.autor }}</p>
+                        <p class="productos__libro-detalle"><strong>Precio:</strong> ${{ libro.precio }}</p>
+                    </div>
+                {% endfor %}
+            </div>
+
+        </section>
+    </div>
+
+    {% include 'bookspace_app/includes/footer.html' %}
+
+</body>
+</html>

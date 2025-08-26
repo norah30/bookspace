@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookSpace</title>
+    <link rel="icon" href="{% static 'bookspace_app/img/logo_BookSpace.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'bookspace_app/css/home.css' %}">
+    <link rel="stylesheet" href="{% static 'bookspace_app/css/login.css' %}">
+</head>
+
+<body>
+    <div class="login-container">
+        <div class="login-form-container">
+            <h2 class="login-form__title">Iniciar Sesión</h2>
+            <form class="login-form" action="{% url 'login' %}" method="POST">
+                {% csrf_token %}
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" name="correo" id="correo" required>
+
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" name="contrasena" id="contrasena" required>
+
+                <div class="login-form__buttons">
+                    <button type="submit" class="login-form__btn">Ingresar</button>
+                    <button type="button" class="login-form__btn salir" onclick="window.location.href='/'">Salir</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="login-image-container">
+            <img src="{% static 'bookspace_app/img/lector_login.jpg' %}" alt="Imagen lector">
+        </div>
+    </div>
+
+    <div id="errorModal">
+        {% if messages %}
+            {% for message in messages %}
+                <div class="mensaje-{{ message.tags }}">{{ message }}</div>
+            {% endfor %}
+        {% endif %}
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{% static 'bookspace_app/js/login.js' %}"></script>
+</body>
+
+</html>

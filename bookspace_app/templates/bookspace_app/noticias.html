@@ -1,0 +1,68 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookSpace</title>
+    <link rel="icon" href="{% static 'bookspace_app/img/logo_BookSpace.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'bookspace_app/css/home.css' %}">
+    <link rel="stylesheet" href="{% static 'bookspace_app/css/noticias.css' %}">
+</head>
+<body>
+
+    {% include 'bookspace_app/includes/header.html' %}
+
+    <div class="fondo-blur"></div>
+
+    <div class="noticias">
+        <section class="noticias__contenido">
+            <h1 class="noticias__titulo">Últimas Noticias</h1>
+
+            <div class="noticias__libros">
+                <div class="noticias__libro-card">
+                    <img class="noticias__libro-imagen" src="{% static 'bookspace_app/img/nuevo_libro.jpg' %}" alt="Libro Take the Risk">
+                    <h2 class="noticias__libro-titulo">Take the Risk</h2>
+                    <p class="noticias__libro-detalle"><strong>Autor:</strong> Ben Carson</p>
+                    <p class="noticias__libro-detalle"><strong>Precio:</strong> $14.99</p>
+                </div>
+
+                <div class="noticias__libro-card">
+                    <img class="noticias__libro-imagen" src="{% static 'bookspace_app/img/nuevo_libro2.jpg' %}" alt="Libro The Passion Within: A Woman's Journal">
+                    <h2 class="noticias__libro-titulo">The Passion Within: A Woman's Journal</h2>
+                    <p class="noticias__libro-detalle"><strong>Autor:</strong> Promise Journals</p>
+                    <p class="noticias__libro-detalle"><strong>Precio:</strong> $16.50</p>
+                </div>
+
+                <div class="noticias__libro-card">
+                    <img class="noticias__libro-imagen" src="{% static 'bookspace_app/img/nuevo_libro3.jpg' %}" alt="Libro The World Atlas of Coffee">
+                    <h2 class="noticias__libro-titulo">The World Atlas of Coffee</h2>
+                    <p class="noticias__libro-detalle"><strong>Autor:</strong> James Hoffman</p>
+                    <p class="noticias__libro-detalle"><strong>Precio:</strong> $12.39</p>
+                </div>
+            </div>
+
+        </section>
+    </div>
+    
+    <div class="actualizacion">
+        <section class="noticias__actualizacion">
+            <article class="noticias__articulo">
+                <h2 class="noticias__articulo-titulo">Actualización de nuestra tienda en línea</h2>
+                <p class="noticias__articulo-fecha">Publicado el 18 de julio de 2025</p>
+
+                <ul class="noticias__articulo-lista">
+                    <li>Hemos agregado 3 nuevos libros a nuestro catálogo. Ahora puedes encontrarlos en BookSpace y disfrutar de nuevas lecturas para todos los gustos.</li>
+                </ul>
+
+                <p class="noticias__articulo-texto">
+                    ¡Te invitamos a explorarlos y descubrir tus próximos favoritos!
+                </p>
+            </article>
+        </section>
+    </div>
+
+    {% include 'bookspace_app/includes/footer.html' %}
+
+</body>
+</html>

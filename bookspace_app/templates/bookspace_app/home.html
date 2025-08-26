@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookSpace</title>
+    <link rel="icon" href="{% static 'bookspace_app/img/logo_BookSpace.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'bookspace_app/css/home.css' %}">
+</head>
+<body>
+    
+    {% include 'bookspace_app/includes/header.html' %}
+
+    <section>
+        <figure class="contenedor_Imagen">
+            <img src="{% static 'bookspace_app/img/biblioteca_General.jpg' %}" alt="Biblioteca de BookSpace">
+            <figcaption>Explora nuestra amplia colección de libros digitales en nuestro sitio web.</figcaption>
+        </figure>
+    </section>
+
+    {% include 'bookspace_app/includes/footer.html' %}
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="{% static 'bookspace_app/js/main.js' %}"></script>
+
+</body>
+</html>

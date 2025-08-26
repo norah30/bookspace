@@ -1,0 +1,52 @@
+.oferta-mes {
+    background-color: #fef9f2;
+    padding: 2rem;
+    border-radius: 12px;
+    margin: 2rem auto;
+    max-width: 900px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.oferta-mes__titulo {
+    text-align: center;
+    color: #d35400;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.oferta-mes__card {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.oferta-mes__imagen {
+    width: 180px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.oferta-mes__contenido {
+    flex: 1;
+}
+
+.oferta-mes__libro {
+    font-size: 1.6rem;
+    margin: 0 0 0.5rem;
+}
+
+.oferta-mes__autor,
+.oferta-mes__precio,
+.oferta-mes__mensaje {
+    margin: 0.3rem 0;
+    font-size: 1.1rem;
+}
+
+.oferta-mes__mensaje {
+    color: #e67e22;
+    font-weight: bold;
+}

@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    font-size: 16px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    --c_negro: #000;
+    --c_blanco: #fff;
+    --c_fondo: #2C3E50;
+    --c_gris: #ECF0F1;
+    --c_naranja: #ffa026;
+}
+
+.contenedor_Encabezado {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+    background-color: var(--c_fondo);
+    color: var(--c_blanco);
+}
+
+.contenedor_Encabezado .logo{
+    width: 200px;
+    height: 120px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor_Encabezado .logo img {
+    width: auto;
+    height: 180px; /* Más grande que el contenedor */
+}
+
+.contenedor_Encabezado--Titulo {
+    flex: 1;
+    max-width: 100%;
+}
+
+.contenedor_Encabezado--Titulo h1 {
+    text-align: center;
+}
+
+.contenedor_Encabezado--Titulo p {
+    margin-top: 5px;
+    font-style: italic;
+    text-align: center;        
+}
+
+
+.contenedor_Enlaces ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
+
+
+.contenedor_Enlaces ul li {
+    width: 100%;
+    text-align: center;
+    background-color: var(--c_blanco);
+}
+
+.contenedor_Enlaces ul li a{
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    color: var(--c_negro);
+    transition: background-color 1.2s ease;
+}
+
+.contenedor_Enlaces ul li a:hover{
+    background-color: rgb(110, 110, 110);
+}
+
+.contenedor_Enlaces ul li.login a:hover{
+    background-color: var(--c_naranja);
+}
+
+.contenedor_Imagen {
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+}
+
+.contenedor_Imagen figcaption {
+    padding: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--c_naranja);
+}
+
+
+.contenedor_Imagen img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.contenedor_Footer {   
+    text-align: center;
+    background-color: var(--c_fondo);
+    color: var(--c_blanco);
+    padding: 20px; 
+}
+
+.contenedor_Footer .contenedor_Columnas {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 200px;
+    row-gap: 90px;
+}
+
+.contenedor_Footer .contenedor_Columnas p {
+    margin-bottom: 45px;
+}
+
+.contenedor_Footer .contenedor_Columnas p b{
+    color: var(--c_naranja);
+}
+
+.contenedor_Footer .contenedor_Copyr {
+    height: 50px;
+}
+
+.contenedor_Footer .contenedor_Copyr p {
+    line-height: 1.5;
+}
+
+

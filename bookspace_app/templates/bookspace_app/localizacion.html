@@ -1,0 +1,58 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BookSpace</title>
+    <link
+      rel="icon"
+      href="{% static 'bookspace_app/img/logo_BookSpace.png' %}"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="{% static 'bookspace_app/css/home.css' %}" />
+    <link
+      rel="stylesheet"
+      href="{% static 'bookspace_app/css/localizacion.css' %}"
+    />
+  </head>
+
+  <body>
+    {% include 'bookspace_app/includes/header.html' %}
+
+    <div class="fondo-blur"></div>
+
+    <div class="contenedor__localizacion">
+      <section class="localizacion">
+        <h1>Nuestra Ubicación</h1>
+        <p class="direccion">
+          Av. 6 de Diciembre &amp; Tomás de Berlanga, Quito (Junto a PharmaPagos
+          El Batán)
+        </p>
+        <div id="mapa" class="mapa"></div>
+      </section>
+    </div>
+
+    {% include 'bookspace_app/includes/footer.html' %}
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+      var lat = -0.16559;
+      var lng = -78.475704;
+
+      var mapa = L.map("mapa").setView([lat, lng], 18);
+
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        attribution: "© OpenStreetMap contributors",
+      }).addTo(mapa);
+
+      L.marker([lat, lng])
+        .addTo(mapa)
+        .bindPopup(
+          "<b>BookSpace</b><br>Av. 6 de Diciembre & Tomás de Berlanga, Quito"
+        )
+        .openPopup();
+    </script>
+  </body>
+</html>

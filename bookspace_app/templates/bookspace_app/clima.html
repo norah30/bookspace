@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookSpace</title>
+    <link rel="icon" href="{% static 'bookspace_app/img/logo_BookSpace.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'bookspace_app/css/home.css' %}">
+    <link rel="stylesheet" href="{% static 'bookspace_app/css/clima.css' %}">
+</head>
+<body>
+
+    {% include 'bookspace_app/includes/header.html' %}
+
+    <div class="fondo-blur"></div>
+
+    <div class="contenedor__clima">
+        <section class="clima">
+            <h1>Clima Actual</h1>
+
+            <div class="busqueda-ciudad">
+                <input type="text" id="ciudad" placeholder="Ingrese la ciudad" required>
+                <button type="button" onclick="obtenerClima()">Buscar Clima</button>
+            </div>
+
+            <div id="datos-clima" class="datos-clima">
+                <div class="temperatura">
+                    <span id="temp-actual">--°C</span>
+                </div>
+                <div class="detalles-clima">
+                    <p id="humedad">Humedad: --%</p>
+                    <p id="descripcion">--</p>
+                    <p id="viento">Viento: -- km/h</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    {% include 'bookspace_app/includes/footer.html' %}
+
+    <script src="{% static 'bookspace_app/js/clima.js' %}"></script>
+
+</body>
+</html>
